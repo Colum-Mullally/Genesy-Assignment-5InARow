@@ -37,7 +37,6 @@ class GameThread extends Thread {
         String result = null;
         result =FiveInARow.join(name);
         System.out.println(result);
-        System.out.println("Enter q at any Time to quit the game and end the program");
         quitLoop:
         while(!FiveInARow.getGameOver()||!quit){
             while(FiveInARow.readyToStart()&&FiveInARow.turn(name)){

@@ -34,7 +34,7 @@ public class GameBoard {
         }
         this.gameBoard=gameBoard;
     }
-    public GameBoard(int NUMBER_OF_ROWS, int NUMBER_OF_COLUMNS, String player1, String player2 ) {//new game with same players game board.
+    public GameBoard(int NUMBER_OF_ROWS, int NUMBER_OF_COLUMNS, String player1, String player2 ) {//new game with same players game board. not used as I decided not to allow rematches
         int row, column;
         String[][] gameBoard;
         for (row = 0, gameBoard = new String [NUMBER_OF_ROWS][NUMBER_OF_COLUMNS]; row < gameBoard.length; row++) {
@@ -51,9 +51,9 @@ public class GameBoard {
     }
     public void quit(String name){
         if(name == player1){
-            WinningMessage = "Game Over"+player2+"Won";
+            WinningMessage = "Game Over "+player2+" Won as the other player quit";
         } else {
-            WinningMessage = "Game Over"+player1+"Won";
+            WinningMessage = "Game Over "+player1+" Won as the other player quit";
         }
         gameOver = true;
     }
@@ -99,6 +99,7 @@ public class GameBoard {
             }
             result += "\n";
         }
+         result +="It is "+turn+"'s turn"+ "\n";
          return result;
     }
     
@@ -153,7 +154,7 @@ public class GameBoard {
                 if (gameBoard[row][column].equals("[" + player1Icon + "]") && gameBoard[row][column + 1].equals("[" + player1Icon + "]")) {
                     player1MaximumChain++;
                     if (player1MaximumChain >= MINIMUM_CHAIN_TO_WIN) {//Checks if Player 1 won horizontally.
-                        WinningMessage = "\n"+player1+" won horizontally!";
+                        WinningMessage = "\n "+player1+"  won horizontally!";
                         gameOver = true;
                         break horizontalOuterLoop;
                     }
@@ -161,7 +162,7 @@ public class GameBoard {
                 else if (gameBoard[row][column].equals("[" + player2Icon + "]") && gameBoard[row][column + 1].equals("[" + player2Icon + "]")) {
                     player2MaximumChain++;
                     if (player2MaximumChain >= MINIMUM_CHAIN_TO_WIN) {//Checks if Player 2 won horizontally.
-                        WinningMessage = "\n"+player2+" won horizontally!";
+                        WinningMessage = "\n "+player2+" won horizontally!";
                         gameOver = true;
                         break horizontalOuterLoop;
                     }

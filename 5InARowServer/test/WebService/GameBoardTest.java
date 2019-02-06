@@ -58,7 +58,8 @@ public class GameBoardTest {
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
+                    "It is "+player1+"'s turn\n";
         result = instance.startGame();
         assertEquals(expResult, result);
     }
@@ -80,7 +81,9 @@ public class GameBoardTest {
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
+                    "It is "+player1+"'s turn\n";
+    
         result = instance.startGame();
         assertEquals(expResult, result);
     }
@@ -120,7 +123,8 @@ public class GameBoardTest {
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+null+"'s turn\n";
         assertEquals(expResult, result);
         String player1 = "player1";
         String player2 = "player2";
@@ -133,7 +137,8 @@ public class GameBoardTest {
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+player2+"'s turn\n";
         result = instance.updateGame();
         assertEquals(expResult, result);
         System.out.println(instance.dropPiece(0));
@@ -142,7 +147,8 @@ public class GameBoardTest {
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+player1+"'s turn\n";
         result = instance.updateGame();
         System.out.println(result);
         assertEquals(expResult, result);
@@ -529,7 +535,8 @@ public class GameBoardTest {
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+player2+"'s turn\n";
         assertEquals(expResult, result);
         result =instance.dropPiece(column);
         expResult = "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
@@ -537,7 +544,8 @@ public class GameBoardTest {
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+player1+"'s turn\n";
         assertEquals(expResult, result);
         result =instance.dropPiece(column);
         expResult = "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
@@ -545,7 +553,8 @@ public class GameBoardTest {
                     "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+player2+"'s turn\n";
         assertEquals(expResult, result);
         result =instance.dropPiece(column);
         expResult = "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
@@ -553,7 +562,8 @@ public class GameBoardTest {
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+player1+"'s turn\n";
         assertEquals(expResult, result);
         result =instance.dropPiece(column);
         expResult = "[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
@@ -561,7 +571,8 @@ public class GameBoardTest {
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+player2+"'s turn\n";
         assertEquals(expResult, result);
         result =instance.dropPiece(column);
         expResult = "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
@@ -569,7 +580,8 @@ public class GameBoardTest {
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
-                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n";
+                    "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n"+
+                    "It is "+player1+"'s turn\n";
         assertEquals(expResult, result);
         result =instance.dropPiece(column);
                 expResult = "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
@@ -578,6 +590,7 @@ public class GameBoardTest {
                     "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[O]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
                     "[X]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	[ ]	\n" +
+                    "It is "+player1+"'s turn\n"+
                     "\nSelected Column is full please select another column";
          System.out.println(result);
         System.out.println(expResult);
