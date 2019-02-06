@@ -1,0 +1,18 @@
+Netbeans(Recommended)
+	-file
+	-Open project
+	-select 5InARowClient & 5InARowServer
+	-right click on 5InARowServer
+	-Select Deploy (ensure localhost:8080 is not in use)
+	-right click on 5InARowClient 
+	-Select Run
+	-right click on 5InARowClient 
+	-Select Run
+	-play game
+Alternative ant (not as comprehensive instructions)
+	-using commandline deploy the server using a command similar to the one below.
+	- ant -f C:\\Users\\Colum\\Documents\\NetBeansProjects\\Genesys\\5InARowServer -Dnb.internal.action.name=redeploy -Ddirectory.deployment.supported=true -DforceRedeploy=true -Dnb.wait.for.caches=true -Dbrowser.context=C:\\Users\\Colum\\Documents\\NetBeansProjects\\Genesys\\5InARowServer run-deploy
+	-using command line run client using similar to command below
+	-ant -f C:\\Users\\Colum\\Documents\\NetBeansProjects\\Genesys\\5InARowClient -Dnb.internal.action.name=run run
+
+	

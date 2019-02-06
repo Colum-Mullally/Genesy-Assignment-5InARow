@@ -1,0 +1,17 @@
+Assumptions made During my work on this assignement:
+-No data needs to be persisted on a database of any kind(If I had to use a database I would do something similar to my previous project located at https://github.com/JakeIRE/MultiplatformTictactoe)
+-Only two plays need to be able to play per instance of the Server
+-Soap is an adaquate protoccol for the webservice as it can communicate via http
+-That the client doesn't require testing beyond exploratory testing and manual testing as it is so tightly coupled to the server that the tests would be almost redudant
+-That when the server requires to be reset after the game the player who's turn it was resets the the server when he leaves
+-That players can't have the same name.
+-Players can't have a rematch without restarting their client
+-Players can only quit on their turn
+-If a player disconnects without quiting e.g closes the program he can rejoin using the same name as before.
+-not an assumption but more of a note(I am aware I could have made a rest webservice using Spring but decided against it partly becuase soap is more reliable but primarly becuase I am working on another project using spring and wanted some variety).
+
+
+Hope that this project is up to par.
+BR
+Colum Mullally.
+
