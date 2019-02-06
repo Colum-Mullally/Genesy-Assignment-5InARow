@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://WebService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebService/">
+
+<xs:element name="dropPiece" type="tns:dropPiece"/>
+
+<xs:element name="dropPieceResponse" type="tns:dropPieceResponse"/>
+
+<xs:element name="gameOver" type="tns:gameOver"/>
+
+<xs:element name="gameOverResponse" type="tns:gameOverResponse"/>
+
+<xs:element name="join" type="tns:join"/>
+
+<xs:element name="joinResponse" type="tns:joinResponse"/>
+
+<xs:element name="nameCheck" type="tns:nameCheck"/>
+
+<xs:element name="nameCheckResponse" type="tns:nameCheckResponse"/>
+
+<xs:element name="quit" type="tns:quit"/>
+
+<xs:element name="quitResponse" type="tns:quitResponse"/>
+
+<xs:element name="readyToStart" type="tns:readyToStart"/>
+
+<xs:element name="readyToStartResponse" type="tns:readyToStartResponse"/>
+
+<xs:element name="resetServer" type="tns:resetServer"/>
+
+<xs:element name="resetServerResponse" type="tns:resetServerResponse"/>
+
+<xs:element name="turn" type="tns:turn"/>
+
+<xs:element name="turnResponse" type="tns:turnResponse"/>
+
+<xs:element name="upadteBoard" type="tns:upadteBoard"/>
+
+<xs:element name="upadteBoardResponse" type="tns:upadteBoardResponse"/>
+
+<xs:complexType name="dropPiece">
+<xs:sequence>
+<xs:element name="column" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dropPieceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="readyToStart">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="readyToStartResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nameCheck">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nameCheckResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="join">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="joinResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="turn">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="turnResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="quit">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="quitResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="upadteBoard">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="upadteBoardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resetServer">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="resetServerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="gameOver">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="gameOverResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
